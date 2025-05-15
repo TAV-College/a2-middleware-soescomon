@@ -1,9 +1,15 @@
 DROP TABLE IF EXISTS books;
-
+DROP TABLE IF EXISTS users;
 
 CREATE TABLE books (
     id INTEGER PRIMARY KEY,
     author TEXT NOT NULL,
     title TEXT NOT NULL,
     isbn TEXT NOT NULL UNIQUE
+);
+
+CREATE TABLE users (
+    id INTEGER PRIMARY KEY,
+    username TEXT UNIQUE NOT NULL,
+    password TEXT NOT NULL
 );
