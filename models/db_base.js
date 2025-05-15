@@ -1,4 +1,4 @@
-const db = require("better-sqlite3")("./books.db", { verbose: console.log });
+const db = require("better-sqlite3")("./books.db");
 const fs = require("fs");
 
 const initDB = () => {
@@ -11,5 +11,5 @@ const initDB = () => {
 
 module.exports = {
   db,
-  initDB
+  initDB,
 };
